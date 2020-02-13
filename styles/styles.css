@@ -1,0 +1,102 @@
+html {
+    margin: auto;
+    padding: 10px;
+}
+body {
+    font-family: fantasy;
+    font-weight: bold;
+    background-color: aquamarine;
+}
+main h1 {
+    text-align: center;
+    font-size: x-large;
+}
+
+.value-cont {
+background-color: chartreuse;
+
+}
+.min-value {
+    font-size: 10px;
+}
+.max-value {
+    font-size: 10px;
+}
+
+#container {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: rgb(153, 153, 153);
+}
+
+#elements {
+    display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
+  grid-template-rows: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
+  grid-template-areas: ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . .";
+
+}
+
+
+@media (max-width: 576px) {
+    #container {
+    grid-template-columns: 1fr;
+    }
+
+.main-cont {
+    width: 100%;
+    min-height: 400px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+}
+@media (max-width: 992px) {
+    #container {
+    width: 500px;
+    height: 100%;
+    margin : 0 auto;
+    background-color: rgb(153, 153, 153);
+    }
+
+#elements {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-areas: ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . .";
+    }
+
+    input[type=number]{
+        width: 100px;
+    }
+
+
+#btn-reset {
+    background-color: yellow; 
+    color: black; 
+    border: 5px solid green;
+  }
+  
+#btn-refresh {
+    background-color: yellow; 
+    color: black; 
+    border: 5px solid green;
+  }
+  
+#btn-fizz {
+    background-color: yellow; 
+    color: black; 
+    border: 5px solid orangered;
+  }
+  
+#btn-buzz {
+    background-color: yellow;
+    color: black;
+    border: 5px solid blue;
+  }
+  
+#btn-fizzbuzz {
+    background-color: yellow;
+    color: black;
+    border: 5px solid  mediumvioletred;
+  }
