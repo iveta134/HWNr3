@@ -1,7 +1,7 @@
 console.log('Script started');
 
-const inp1 = document.querySelector("#min-value");
-const inp2 = document.querySelector("#max-value");
+// const inp1 = document.querySelector("#min-value");
+// const inp2 = document.querySelector("#max-value");
 const btnRefresh = document.querySelector("#btn-refresh");
 const btnReset = document.querySelector("#btn-reset");
 const btnFizz = document.querySelector("#btn-fizz");
@@ -19,17 +19,17 @@ for (var i=1; i < 101; i++){
 }
 
 
-function innit () {
-    console.log('Adding listeners')
-    addListeners();
-    document.getElementById('elements');
+// function innit () {
+//     console.log('Adding listeners')
+//     addListeners();
+//     document.getElementById('elements');
     
-   btnReset.addEventListener("click", onClickClear);
-   btnRefresh.addEventListener("click", onClickRefresh);
-   btnFizz.addEventListener("click", onClickFizz);
-   btnBuzz.addEventListener("click", onClickBuzz);
-   btnfizzbuzz.addEventListener("click", onClickFizzBuzz);
-}
+//    btnReset.addEventListener("click", onClickClear);
+//    btnRefresh.addEventListener("click", onClickRefresh);
+//    btnFizz.addEventListener("click", onClickFizz);
+//    btnBuzz.addEventListener("click", onClickBuzz);
+//    btnfizzbuzz.addEventListener("click", onClickFizzBuzz);
+// }
 
 // var sl1 = document.getElementById("elWidth");
 // var sl1Value = document.getElementById("elWidthOutput");
@@ -46,9 +46,8 @@ function innit () {
 // sl2.oninput = function() {
 //   sl2Value.innerHTML = this.value;
 // }
-function onClick() {
-    onClickReset();
-    console.log('reset Button clicked');
+function onClickRefresh() {
+    console.log('Refresh Button clicked');
         for(let i = 1; i<101; i++){
             const element = document.createElement('div');
             element.className="element" + i;
@@ -81,6 +80,11 @@ function onClick() {
         }
 }
 
+// btnRefresh.addEventListener("click", () => {
+//     onClickRefresh();
+// });
+
+
 function onClickReset () {
     while (elements.firstChild) {
         elements.removeChild(elements.firstChild);
@@ -88,10 +92,11 @@ function onClickReset () {
     console.log('Divs cleared');
 }
 
-function onClickFIzzBuzz (){
-    onClickReset();
-    console.log('Divs cleared');
-    console.log('Generate custom divs');
+// function onClickFIzzBuzz (){
+//     onClickReset();
+//     console.log('Divs cleared');
+//     console.log('Generate custom divs');
+
     // var startValue = document.getElementById('startValue').value;
     // var endValue = document.getElementById('endValue').value;   
     // var fizzValue = document.getElementById('fizzValue').value;
@@ -108,52 +113,52 @@ function onClickFIzzBuzz (){
     // console.log('buzz color - ' + buzzColor);
     // console.log('fizzbuzz color - ' + fizzBuzzColor);
     // console.log('none color - ' + noneColor);
-        for (inp1; inp1<=inp2; inp1++){
-            const element = document.createElement('div');
-            element.id="element" + inp1;
+        
+    
+//     for (inp1; inp1<=inp2; inp1++){
+//             const element = document.createElement('div');
+//             element.id="element" + inp1;
             
-            elements.appendChild(element);
-                if (inp1 % 3 === 0 && inp1 % 5 === 0){
-                    element.setAttribute("id", "element" +inp1);
-                    element.setAttribute("class", "FizzBuzz");
-                    element.innerText="FizzBuzz " + inp1;
-                    // element.style.width=sl1.value + "px";
-                    // element.style.height=sl2.value + "px";
-                }
-                else if (inp1 % 3 === 0 && inp1 % 5 !== 0) {
-                    element.setAttribute("id", "element" +inp1);
-                    element.setAttribute("class", "Fizz");
-                    element.innerText="Fizz " + inp1;
-                    // element.style.width=sl1.value + "px";
-                    // element.style.height=sl2.value + "px";
-                }
+//             elements.appendChild(element);
+//                 if (inp1 % 3 === 0 && inp1 % 5 === 0){
+//                     element.setAttribute("id", "element" +inp1);
+//                     element.setAttribute("class", "FizzBuzz");
+//                     element.innerText="FizzBuzz " + inp1;
+//                     // element.style.width=sl1.value + "px";
+//                     // element.style.height=sl2.value + "px";
+//                 }
+//                 else if (inp1 % 3 === 0 && inp1 % 5 !== 0) {
+//                     element.setAttribute("id", "element" +inp1);
+//                     element.setAttribute("class", "Fizz");
+//                     element.innerText="Fizz " + inp1;
+//                     // element.style.width=sl1.value + "px";
+//                     // element.style.height=sl2.value + "px";
+//                 }
 
-                else if (inp1 % 5 === 0 && inp1 % 3 !== 0){
-                    element.setAttribute("id", "element" +inp1);
-                    element.setAttribute("class", "Buzz");
-                    element.innerText="Buzz " + inp1;
-                    // element.style.backgroundColor=buzzColor;
-                    // element.style.width=sl1.value + "px";
-                    // element.style.height=sl2.value + "px";
-                }
+//                 else if (inp1 % 5 === 0 && inp1 % 3 !== 0){
+//                     element.setAttribute("id", "element" +inp1);
+//                     element.setAttribute("class", "Buzz");
+//                     element.innerText="Buzz " + inp1;
+//                     // element.style.backgroundColor=buzzColor;
+//                     // element.style.width=sl1.value + "px";
+//                     // element.style.height=sl2.value + "px";
+//                 }
 
-                else if (inp1 % 3 !== 0 && inp1 % 5 !== 0){
-                    element.setAttribute("id", "element" +inp1);
-                    element.setAttribute("class", "Empty");
-                    element.innerText=inp1;
-                    // element.style.backgroundColor=noneColor;
-                    // element.style.width=sl1.value + "px";
-                    // element.style.height=sl2.value + "px";
+//                 else if (inp1 % 3 !== 0 && inp1 % 5 !== 0){
+//                     element.setAttribute("id", "element" +inp1);
+//                     element.setAttribute("class", "Empty");
+//                     element.innerText=inp1;
+//                     // element.style.backgroundColor=noneColor;
+//                     // element.style.width=sl1.value + "px";
+//                     // element.style.height=sl2.value + "px";
 
-                }
-        }
-}
+//                 }
+//         }
+// }
 
- function addListeners() {
-    const submit = document.getElementById('btn-fizzbuzz');
-    submit.onclick = onClick;
-}
+//  function addListeners() {
+//     const submit = document.getElementById('btn-refresh');
+//     submit.addEventListener("click", onClickRefresh);
+// }
 
-
-
-innit();
+// innit();
