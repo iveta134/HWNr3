@@ -1,32 +1,62 @@
 #container {
     width: 100%;
     margin: 0 auto;
-    background-color: lightsalmon;
+    background-color: grey;
 }
 
-span {
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+  }
+h4 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+  }
+.num {
     border: 1px solid black;
     border-radius: 10px;
     width: 80px;
-    height: 40px;
+    height: 60px;
     padding: 5px;
     margin: 10px;
     text-align: center;
     background-color: aquamarine;
-    display: none;
+    
 }
-
 .fizz {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80px;
+    height: 60px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
     background-color: yellow;
+    
 }
-
 .buzz {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80px;
+    height: 60px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
     background-color: blue;
+    
+}
+.fizzbuzz {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80px;
+    height: 60px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    background-color: green;
+    
 }
 
-.fizzbuzz {
-    background-color: green;
-}
 
 #submit {
     width: 110px;
@@ -40,14 +70,14 @@ span {
 }
 
 #submit:hover {
-    background-color: green;
+    background-color: red;
 }
 
 #reset {
     width: 110px;
     height: 50px;
     border-radius: 10px;
-    background-color: gray;
+    background-color: yellowgreen;
     color: #fff;
     border: none;
     margin: 10px;
@@ -55,7 +85,7 @@ span {
 }
 
 #reset:hover {
-    background-color: orangered;
+    background-color: red;
 }
 
 form {
@@ -73,39 +103,50 @@ input {
     color: firebrick;
 }
 
+#output {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+        }
+
+
+
+@media (min-width: 576px) {
+#container {
+    width: 100%;
+    min-height: 100%;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+
+}
+#output {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-areas: ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . .";
+    align-items: center;
+}
+
+}
+
+@media (min-width: 992px) {
+#container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+}
+
 
 #output {
     display: grid;
   grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
   grid-template-rows: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
   grid-template-areas: ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . ." ". . . . . . . . . .";
-  
-}
-
-
-@media (max-width: 576px) {
-#container {
-    width: 300px;
-    min-height: 100%;
-
-}
-#output {
-    display: inline;
-   
-        }
-}
-
-@media (max-width: 992px) {
-#container {
-    width: 500px;
-    height: 100%;
-    margin : 0 auto;
-}
-
-#output {
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-    grid-template-areas: ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . .";
+  align-items: center;
+ 
+    
 }
 }
